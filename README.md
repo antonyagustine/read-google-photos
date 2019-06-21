@@ -1,6 +1,6 @@
 ### Read public photos from google album
 
-######Download the package first and follow the steps.
+###### Download the package first and follow the steps.
 > - Go to google-photos folder and run `npm install`.
 
 ##### Runing this app
@@ -16,7 +16,7 @@ Run command in terminal/cmd on google-photos folder to sync photos manually in y
 > `node -e 'require("./google-photos").getPhotosFromFile()'`
 
 
-#####Examples:
+##### Examples:
 ###### Using Axios
 - URL /get-one-album-urls
 > axios.get(`http://localhost:3002/get-one-album-urls/${id}`)
@@ -25,37 +25,37 @@ Run command in terminal/cmd on google-photos folder to sync photos manually in y
 ###### Using fetch method.
 - URL /get-one-album-urls
 > fetch(`http://localhost:3002/get-one-album-urls/${id}`) //Replace album id in the url
-&nbsp;&nbsp;.then(
-&nbsp;&nbsp;&nbsp;&nbsp;function(response) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (response.status !== 200) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Looks like there was a problem. Status Code: ' + response.status);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Examine the text in the response
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.json().then(function(data) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(data);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;)
+then(
+function(response) {
+if (response.status !== 200) {
+console.log('Looks like there was a problem. Status Code: ' + response.status);
+return;
+}
+// Examine the text in the response
+response.json().then(function(data) {
+console.log(data);
+});
+}
+)
 .catch(function(err) {
-&nbsp;&nbsp;console.log('Fetch Error :-S', err);
+console.log('Fetch Error :-S', err);
 });
 - URL /get-all-album-urls
 > fetch(`http://localhost:3002/get-all-album-urls`)
-&nbsp;&nbsp;.then(
-&nbsp;&nbsp;&nbsp;&nbsp;function(response) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (response.status !== 200) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log('Looks like there was a problem. Status Code: ' + response.status);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return;
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// Examine the text in the response
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;response.json().then(function(data) {
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(data);
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});
-&nbsp;&nbsp;&nbsp;&nbsp;}
-&nbsp;&nbsp;)
+.then(
+function(response) {
+if (response.status !== 200) {
+console.log('Looks like there was a problem. Status Code: ' + response.status);
+return;
+}
+// Examine the text in the response
+response.json().then(function(data) {
+console.log(data);
+});
+}
+)
 .catch(function(err) {
-&nbsp;&nbsp;console.log('Fetch Error :-S', err);
+console.log('Fetch Error :-S', err);
 });
 
 #### Contact us on [processdrive.com](http://processdrive.com)
