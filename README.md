@@ -24,30 +24,31 @@ Run command in terminal/cmd on google-photos folder to sync photos manually in y
 > axios.get(`http://localhost:3002/get-all-album-urls`)
 ###### Using fetch method.
 - URL /get-one-album-urls
-> fetch(`http://localhost:3002/get-one-album-urls/${id}`) //Replace album id in the url
-then(
-function(response) {
-if (response.status !== 200) {
-console.log('Looks like there was a problem. Status Code: ' + response.status);
-return;
-}
-// Examine the text in the response
-response.json().then(function(data) {
-console.log(data);
-});
-}
-)
-.catch(function(err) {
-console.log('Fetch Error :-S', err);
-});
+> //Replace album id in the url
+
+> fetch(`http://localhost:3002/get-one-album-urls/${id}`)
+>then(
+>function(response) {
+>if (response.status !== 200) {
+>console.log('Looks like there was a problem. Status Code: ' + response.status);
+>return;
+>}
+>// Examine the text in the response
+>response.json().then(function(data) {
+>console.log(data);
+>});
+>}
+>)
+>.catch(function(err) {
+>console.log('Fetch Error :-S', err);
+>});
 - URL /get-all-album-urls
 > fetch(`http://localhost:3002/get-all-album-urls`)
-.then(
-function(response) {
-if (response.status !== 200) {
-console.log('Looks like there was a problem. Status Code: ' + response.status);
-return;
-}
+>.then(function(response) {
+>if (response.status !== 200) {
+>console.log('Looks like there was a problem. Status Code: ' + response.status);
+>return;
+>}
 // Examine the text in the response
 response.json().then(function(data) {
 console.log(data);
